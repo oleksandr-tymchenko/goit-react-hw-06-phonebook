@@ -18,7 +18,7 @@ export const ContactsCont = styled.ul`
 `;
 
 export const BtnDel = styled.button`
-  margin-left: 5px;
+  margin-left: 10px;
   padding: 2px 10px 4px 10px;
 
   color: ${props => props.theme.colors.dark};
@@ -33,6 +33,8 @@ export const BtnDel = styled.button`
 `;
 
 export const Name = styled.span`
+  /* display: flex; */
+  /* justify-content: space-between; */
   font-size: ${props => props.theme.fontSizes.medium};
   font-style: italic;
 `;

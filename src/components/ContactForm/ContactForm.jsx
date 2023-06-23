@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
 import { FormCont, Label, Btn, Input, ErrMessage } from './ContactForm.styled';
+// import { useDispatch } from 'react-redux';
+// import { addContact } from 'redux/contactsSlise';
 
 const schema = yup.object().shape({
   name: yup
@@ -26,6 +28,12 @@ const initialValues = {
 };
 
 export default function ContactForm({ data }) {
+  // const dispatch = useDispatch();
+  // const handleSubmit = data => {
+  //   console.log(data);
+  //   // dispatch(addContact(data));
+  // };
+
   return (
     <Formik
       initialValues={initialValues}
