@@ -53,14 +53,14 @@ import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 // import SetTransform from './transform';
 
-const contactsInitialState = {
-  items: [
-    { id: 0, name: 'Mango', number: 1223345 },
-    { id: 1, name: 'Poly', number: 45454545 },
-    { id: 2, name: 'Ajax', number: 4545454545 },
-  ],
-};
-// const contactsInitialState = [];
+// const contactsInitialState = {
+//   items: [
+//     { id: 0, name: 'Mango', number: 1223345 },
+//     { id: 1, name: 'Poly', number: 45454545 },
+//     { id: 2, name: 'Ajax', number: 4545454545 },
+//   ],
+// };
+const contactsInitialState = [];
 
 const contactsSlice = createSlice({
   name: 'contacts',
