@@ -14,37 +14,29 @@ import { getContacts } from 'redux/selectors';
 
 export const App = () => {
   const contacts = useSelector(getContacts);
-  const dispatch = useDispatch();
-  console.log(contacts);
+  // const dispatch = useDispatch();
+
   // const [contacts, setContacts] = useLocalStorage('contacts', []);
 
   const [filter, setFilter] = useState('');
-  const existedContact = (contacts, values) => {
-    contacts.find(contact => contact.name === values.name);
-  };
+  // const existedContact = (contacts, values) => {
+  //   contacts.find(contact => contact.name === values.name);
+  // };
 
-  const handleSubmit = (values, { resetForm }) => {
-    values.id = nanoid();
-    if (existedContact(contacts, values)) {
-      alert(`${values.name} is already in contacts`);
-      return;
-    }
-    // setContacts(prevConacts => [...prevConacts, values]);
-    dispatch(addContact(values));
-    resetForm();
-  };
+  // const handleSubmit = (values, { resetForm }) => {
+  //   values.id = nanoid();
+  //   if (existedContact(contacts, values)) {
+  //     alert(`${values.name} is already in contacts`);
+  //     return;
+  //   }
+  //   // setContacts(prevConacts => [...prevConacts, values]);
+  //   dispatch(addContact(values));
+  //   resetForm();
+  // };
 
   const onSearchValue = e => {
     setFilter(e.target.value);
   };
-
-  // const deleteContact = id => {
-  //   // setContacts(prevConacts =>
-  //   //   prevConacts.filter(contact => contact.id !== contactId)
-  //   // );
-  //   // console.log(id);
-  //   dispatch(deleteContact('4X_Fgra-5FXsfNF9k6Xmn'));
-  // };
 
   const getVisibleContacts = () => {
     const normalizedFilter = filter.toLowerCase();
@@ -58,13 +50,10 @@ export const App = () => {
   return (
     <Container>
       <Title1>Phonebook</Title1>
-      <ContactForm data={handleSubmit} />
+      <ContactForm />
       <Title2>Contacts</Title2>
       <Filter value={filter} onSearch={onSearchValue} />
-      <ContactList
-        contacts={getVisibleContacts()}
-        // onDeleteContact={deleteContact}
-      />
+      <ContactList contacts={getVisibleContacts()} />
     </Container>
   );
 };

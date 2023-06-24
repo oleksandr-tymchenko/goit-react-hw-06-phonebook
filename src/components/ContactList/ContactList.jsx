@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ContactsCont, BtnDel, Name } from './ContactListStyled';
+import { ContactsCont } from './ContactListStyled';
 
 import { useSelector } from 'react-redux';
 import { getContacts } from 'redux/selectors';
