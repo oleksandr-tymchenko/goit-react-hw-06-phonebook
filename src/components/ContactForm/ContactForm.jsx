@@ -32,6 +32,8 @@ const initialValues = {
 
 export default function ContactForm() {
   const contacts = useSelector(getContacts);
+  // const contacts = Object.values(contactsObj);
+  // const delEl = contacts.pop();
   const dispatch = useDispatch();
 
   const existedContact = (contacts, values) => {
