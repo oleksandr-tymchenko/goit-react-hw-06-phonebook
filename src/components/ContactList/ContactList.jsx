@@ -8,15 +8,11 @@ import Contact from 'components/Contact/Contact';
 
 export default function ContactList() {
   const contacts = useSelector(getContacts);
-  console.log('contacts', contacts);
-  // const contArr = Object.values(contacts);
-  // const delEl = contArr.pop();
-  // console.log('contArr', contArr);
+
   const filterValue = useSelector(getFilterValue);
 
   const getVisibleContacts = () => {
     const normalizedFilter = filterValue.toLowerCase();
-    // console.log('contacts', contacts);
 
     if (!contacts) return;
     return contacts.filter(contact =>

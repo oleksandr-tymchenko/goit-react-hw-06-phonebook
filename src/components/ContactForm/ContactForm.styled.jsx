@@ -45,12 +45,3 @@ export const Btn = styled.button`
     color: ${props => props.theme.colors.accent};
   }
 `;
-// label {
-//   display: flex;
-//   flex-direction: column;
-// }
-
-// input {
-//   padding: 4px;
-//   font-family: inherit;
-// }

@@ -1,6 +1,6 @@
 import ContactForm from './ContactForm/ContactForm';
 
-import { useLocalStorage } from './hooks/useLocalStorage';
+// import { useLocalStorage } from './hooks/useLocalStorage';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
 import { Container, Title1, Title2 } from './App.styled';
