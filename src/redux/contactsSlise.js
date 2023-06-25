@@ -60,7 +60,7 @@ import storage from 'redux-persist/lib/storage';
 //     { id: 2, name: 'Ajax', number: 4545454545 },
 //   ],
 // };
-const contactsInitialState = [];
+const contactsInitialState = { items: [] };
 
 const contactsSlice = createSlice({
   name: 'contacts',
