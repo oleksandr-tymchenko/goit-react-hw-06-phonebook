@@ -14,7 +14,6 @@ export default function ContactList() {
   const getVisibleContacts = () => {
     const normalizedFilter = filterValue.toLowerCase();
 
-    if (!contacts) return;
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter)
     );
